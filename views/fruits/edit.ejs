@@ -6,8 +6,6 @@
     <title>Edit Page</title>
 </head>
 <body>
-    <h1>Edit Form</h1>
-        <!-- update the header -->
         <h1>Edit <%= fruit.name %></h1>
         <form action="/fruits/<%=fruit._id%>?_method=PUT" method="POST"></form>
           <label for="name">Name:</label>
