@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Create fruit</title>
 </head>
 <body>
@@ -12,8 +13,13 @@
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
 
-        <label for="isReadyToEat">Ready to eat?</label>
-        <input type="checkbox" name="isReadyToEat" id="isReadyToEat" />
+        <!-- <label for="isReadyToEat">Ready to eat?</label>
+        <input type="checkbox" name="isReadyToEat" id="isReadyToEat" /> -->
+
+        <div class="checkbox-div">
+            <label for="ready-to-eat">Ready to Eat?</label>
+            <input type="checkbox" name="isReadyToEat" id="ready-to-eat" />
+          </div>
 
         <button type="submit">Add Fruit</button>
     </form>

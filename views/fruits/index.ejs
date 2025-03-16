@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Fruit Index</title>
 </head>
-<body>
-    <h1>Fruit List</h1>
-    <% allFruits.forEach(fruit => { %>
-        <li><a href="/fruits/<%= fruit._id %>"> <%= fruit.name %></a></li>
-    <% }) %>
-    <a href ="/fruits/new">Add new fruit</a>
-</body>
+ <body>
+   <div class="index-header-div">
+     <h1>All Fruits</h1>
+     <a class="add-fruit" href="/fruits/new">Add fruit</a>
+   </div>
+   <ul>
+     <% allFruits.forEach((fruit)=> { %>
+     <li>
+       <a class="fruit-cards" href="/fruits/<%=fruit._id%>">
+         <%= fruit.name %>
+       </a>
+     </li>
+     <% }) %>
+   </ul>
+ </body>
 </html>

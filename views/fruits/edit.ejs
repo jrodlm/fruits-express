@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Edit Page</title>
 </head>
 <body>
@@ -16,6 +17,8 @@
           <input type="checkbox" name="isReadyToEat" <% if (fruit.isReadyToEat) { %>checked<% } %> >
           <button type="submit">Update Fruit</button>
         </form>
-        <a href="/fruits">Back to Fruits</a>
+        <a class="fruits-index-link" href="/fruits">
+            <div class="index-link-text">Back to Fruits</div>
+          </a>
 </body>
 </html>

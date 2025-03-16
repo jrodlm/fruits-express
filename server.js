@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 4000
 const Fruit = require('./models/fruit')
 const methodOverride = require('method-override')
 const morgan = require('morgan')
+const path = require("path");
 
 //DATABASE CONNECTION
 mongoose.connect(process.env.MONGODB_URI)
@@ -19,6 +20,15 @@ mongoose.connection.on("connected", () => {
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride("_method"))
 app.use(morgan("dev"))
+
+// new code below this line
+app.use(express.static(path.join(__dirname, "public")));
+
+// new code above this line
+app.get("/", async (req, res) => {
+  res.render("home.ejs");
+});
+
 
 // ROUTES // 
 // I.N.D.U.C.E.S 
