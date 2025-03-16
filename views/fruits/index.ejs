@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Index</title>
+</head>
+<body>
+    <h1>Fruit List</h1>
+    <% allFruits.forEach(fruit => { %>
+        <li><a href="/fruits/<%= fruit._id %>"> <%= fruit.name %></a></li>
+    <% }) %>
+    <a href ="/fruits/new">Add new fruit</a>
+</body>
+</html>

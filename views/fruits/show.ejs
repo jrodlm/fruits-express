@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Show Page</title>
+</head>
+
+<body>
+    <h1>Here is your fruit</h1>
+    <h3>
+        <%= foundFruit.name %>
+    </h3>
+    <% if(foundFruit.isReadyToEat) { %>
+        <p>This fruit is ready to eat! </p>
+    <% } else { %>
+        <p>This fruit is not ready to eat!</p>
+    <% } %>
+    <form action="/fruits/<%=foundFruit._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= foundFruit.name %></button>
+    </form>
+    <a href="/fruits/<%= foundFruit._id %>/edit">Edit <%= foundFruit.name %></a>
+
+    <a href="/fruits">Back to Fruits</a>
+
+</body>
+
+</html>
